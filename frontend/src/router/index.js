@@ -55,12 +55,12 @@ const routes = [
     beforeEnter: adminAuth
   },
   {
-    path: '/about',
-    name: 'about',
+    path: '/protocolo',
+    name: 'protocolo',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/ProtocoloView.vue')
   }
 ]
 

@@ -1,23 +1,23 @@
 <template>
-  <div>
+  <div class="container">
     <hr>
     <h2>Login de Usuários</h2>
     <hr>
-    <div>
-      <div>
+    <div class="card form-control">
+      <form>
         <div v-if="error != undefined">
           <div>
             <p>{{ error }}</p>
           </div>
         </div>
-        <p>Email</p>
-        <input type="email" class="input" placeholder="email@email" v-model="email">
-        <p>Senha</p>
-        <input type="password" class="input" placeholder="********" v-model="password">
+        <label class="col-sm-2 col-form-label">Email</label>
+        <input type="email" class="form-control" placeholder="email@email" v-model="email">
+        <label>Senha</label>
+        <input type="password" class="form-control" placeholder="********" v-model="password">
         <hr>
-        <button class="button is-success" @click="login">Logar</button><br>
-        <small>Ainda não tem uma conta? Faça seu Registro <router-link :to="{name: 'Register'}">Aqui</router-link></small>
-      </div>
+        <button class="btn btn-success mb-3" @click="login">Logar</button><br>
+        <small>Ainda não tem uma conta? Faça seu Registro <router-link style="text-decoration: none;" :to="{name: 'Register'}">Aqui</router-link></small>
+      </form>
     </div>
   </div>
 </template>
@@ -50,4 +50,9 @@ export default {
 }
 </script>
 
-<style></style>
+<style scoped>
+.container{
+  align-items: center;
+  
+}
+</style>

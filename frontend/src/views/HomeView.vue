@@ -1,19 +1,21 @@
 <template>
   <div class="home">
-    <HelloWorld />
-    
+    <CarouselView/>
+    <CTA/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-//import NavBar from '@/components/NavBar.vue'; está sendo importado globalmente no Main
+import CarouselView from '@/components/CarouselView.vue';
+import CTA from '@/components/CTA.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld,
+    CarouselView,
+    CTA
   }
+  
 }
 </script>
