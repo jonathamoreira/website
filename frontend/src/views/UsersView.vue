@@ -1,8 +1,8 @@
 <template>
   <div>
     <h2>Painel Adm</h2>
-    <div class="box">
-      <table class="table">
+    <div>
+      <table>
         <thead>
           <tr>
             <th>Nome</th>
@@ -17,8 +17,8 @@
             <td>{{ user.email }}</td>
             <td>{{ user.role | processRole }}</td>
             <td>
-              <router-link :to="{name: 'UserEdit', params: {id: user.id}}"><button class="button is-warning">Editar</button> </router-link>
-              <button class="button is-danger" @click="showModalUser(user.id)">Excluir</button></td>
+              <router-link :to="{name: 'UserEdit', params: {id: user.id}}"><button class="btn btn-warning">Editar</button> </router-link>
+              <button class="btn btn-danger" @click="showModalUser(user.id)">Excluir</button></td>
           </tr>
         </tbody>
       </table>
